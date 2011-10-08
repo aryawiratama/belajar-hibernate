@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/latihan</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">bandenk</property>
+    <property name="hibernate.default_schema">latihan</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping class="hibernate.annotation.Annonations"/>
+    <mapping class="hibernate.compoundpk.CompoundPK"/>
+    <mapping class="hibernate.tablegenerator.TableGenerator"/>
+    <mapping class="hibernate.embededclass.Mahasiswa"/>
+    <mapping class="hibernate.inheritancemapping.Module"/>
+    <mapping class="hibernate.inheritancemapping.Project"/>
+    <mapping class="hibernate.inheritancemapping.Task"/>
+    <mapping class="hibernate.onetoone.Person"/>
+    <mapping class="hibernate.onetoone.PersonDetail"/>
+    <mapping class="hibernate.onetomany.Kategori"/>
+    <mapping class="hibernate.onetomany.Barang"/>
+    <mapping class="hibernate.manytomany.Dosen"/>
+    <mapping class="hibernate.manytomany.MataKuliah"/>
+    <mapping class="hibernate.embeddedid.User"/>
+  </session-factory>
+</hibernate-configuration>
